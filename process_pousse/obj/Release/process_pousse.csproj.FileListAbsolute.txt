@@ -1,0 +1,15 @@
+D:\pranay\process\process_pousse\bin\Release\process_pousse.exe
+D:\pranay\process\process_pousse\bin\Release\process_pousse.XmlSerializers.dll
+D:\pranay\process\process_pousse\bin\Release\System.Data.SQLite.dll
+D:\pranay\process\process_pousse\bin\Release\process_pousse.exe.config
+D:\pranay\process\process_pousse\bin\Release\EntityFramework.SqlServer.dll
+D:\pranay\process\process_pousse\bin\Release\EntityFramework.dll
+D:\pranay\process\process_pousse\bin\Release\System.Data.SQLite.EF6.dll
+D:\pranay\process\process_pousse\bin\Release\System.Data.SQLite.Linq.dll
+D:\pranay\process\process_pousse\obj\Release\process_pousse.csproj.AssemblyReference.cache
+D:\pranay\process\process_pousse\obj\Release\process_pousse.csproj.CoreCompileInputs.cache
+D:\pranay\process\process_pousse\obj\Release\process_pousse.csproj.CopyComplete
+D:\pranay\process\process_pousse\obj\Release\process_pousse.exe
+D:\pranay\process\process_pousse\obj\Release\process_pousse.pdb
+D:\pranay\process\process_pousse\obj\Release\process_pousse.XmlSerializers.dll
+D:\pranay\process\process_pousse\bin\Release\process_pousse.pdb

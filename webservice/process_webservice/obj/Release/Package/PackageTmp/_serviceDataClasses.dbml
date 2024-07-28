@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EMP_monitoring" Class="_serviceDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.browser_history" Member="browser_histories">
+    <Type Name="browser_history">
+      <Column Name="browser_historyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_masterID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="browser_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="url" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="last_visit_time" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="entrydate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.screen_capture" Member="screen_captures">
+    <Type Name="screen_capture">
+      <Column Name="screen_captureID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_masterID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="image_patch" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="entrydate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user_master" Member="user_masters">
+    <Type Name="user_master">
+      <Column Name="user_masterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="entrydate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="limit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.admin_login" Member="admin_logins">
+    <Type Name="admin_login">
+      <Column Name="admin_login_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.process_master" Member="process_masters">
+    <Type Name="process_master">
+      <Column Name="process_masterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_masterID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="processid" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="processName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="procStartTime" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="appname" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="totalProcessorTime" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="userProcessorTime" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StartInfo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="entrydate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="countr" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.errorlog" Member="errorlogs">
+    <Type Name="errorlog">
+      <Column Name="errorlogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mothod" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="errortrace" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="entrydate" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="user_masterID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="error_stack" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

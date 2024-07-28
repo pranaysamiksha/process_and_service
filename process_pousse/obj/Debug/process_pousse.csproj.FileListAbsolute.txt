@@ -1,0 +1,13 @@
+D:\pranay\process\process_pousse\bin\Debug\process_pousse.exe.config
+D:\pranay\process\process_pousse\bin\Debug\process_pousse.exe
+D:\pranay\process\process_pousse\bin\Debug\process_pousse.pdb
+D:\pranay\process\process_pousse\obj\Debug\process_pousse.csproj.AssemblyReference.cache
+D:\pranay\process\process_pousse\obj\Debug\process_pousse.csproj.CoreCompileInputs.cache
+D:\pranay\process\process_pousse\obj\Debug\process_pousse.exe
+D:\pranay\process\process_pousse\obj\Debug\process_pousse.pdb
+D:\pranay\process\process_pousse\bin\Debug\EntityFramework.SqlServer.dll
+D:\pranay\process\process_pousse\bin\Debug\EntityFramework.dll
+D:\pranay\process\process_pousse\bin\Debug\System.Data.SQLite.dll
+D:\pranay\process\process_pousse\bin\Debug\System.Data.SQLite.EF6.dll
+D:\pranay\process\process_pousse\bin\Debug\System.Data.SQLite.Linq.dll
+D:\pranay\process\process_pousse\obj\Debug\process_pousse.csproj.CopyComplete

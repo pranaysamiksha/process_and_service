@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getActiveCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user_masterID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getActiveCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getActiveCountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Addprocess_master">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user_masterID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="processid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="processName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="procStartTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="totalProcessorTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userProcessorTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Addprocess_masterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Addprocess_masterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Addbrowser_history">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user_masterID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="browser_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="last_visit_time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Addbrowser_historyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Addbrowser_historyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="convertImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user_masterID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="imgtext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="convertImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="convertImageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getActiveCountSoapIn">
+    <wsdl:part name="parameters" element="tns:getActiveCount" />
+  </wsdl:message>
+  <wsdl:message name="getActiveCountSoapOut">
+    <wsdl:part name="parameters" element="tns:getActiveCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Addprocess_masterSoapIn">
+    <wsdl:part name="parameters" element="tns:Addprocess_master" />
+  </wsdl:message>
+  <wsdl:message name="Addprocess_masterSoapOut">
+    <wsdl:part name="parameters" element="tns:Addprocess_masterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Addbrowser_historySoapIn">
+    <wsdl:part name="parameters" element="tns:Addbrowser_history" />
+  </wsdl:message>
+  <wsdl:message name="Addbrowser_historySoapOut">
+    <wsdl:part name="parameters" element="tns:Addbrowser_historyResponse" />
+  </wsdl:message>
+  <wsdl:message name="convertImageSoapIn">
+    <wsdl:part name="parameters" element="tns:convertImage" />
+  </wsdl:message>
+  <wsdl:message name="convertImageSoapOut">
+    <wsdl:part name="parameters" element="tns:convertImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getActiveCountHttpGetIn">
+    <wsdl:part name="user_masterID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getActiveCountHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Addprocess_masterHttpGetIn">
+    <wsdl:part name="user_masterID" type="s:string" />
+    <wsdl:part name="processid" type="s:string" />
+    <wsdl:part name="processName" type="s:string" />
+    <wsdl:part name="procStartTime" type="s:string" />
+    <wsdl:part name="appname" type="s:string" />
+    <wsdl:part name="totalProcessorTime" type="s:string" />
+    <wsdl:part name="userProcessorTime" type="s:string" />
+    <wsdl:part name="StartInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Addprocess_masterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Addbrowser_historyHttpGetIn">
+    <wsdl:part name="user_masterID" type="s:string" />
+    <wsdl:part name="browser_name" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+    <wsdl:part name="last_visit_time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Addbrowser_historyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="convertImageHttpGetIn">
+    <wsdl:part name="user_masterID" type="s:string" />
+    <wsdl:part name="imgtext" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="convertImageHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getActiveCountHttpPostIn">
+    <wsdl:part name="user_masterID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getActiveCountHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Addprocess_masterHttpPostIn">
+    <wsdl:part name="user_masterID" type="s:string" />
+    <wsdl:part name="processid" type="s:string" />
+    <wsdl:part name="processName" type="s:string" />
+    <wsdl:part name="procStartTime" type="s:string" />
+    <wsdl:part name="appname" type="s:string" />
+    <wsdl:part name="totalProcessorTime" type="s:string" />
+    <wsdl:part name="userProcessorTime" type="s:string" />
+    <wsdl:part name="StartInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Addprocess_masterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Addbrowser_historyHttpPostIn">
+    <wsdl:part name="user_masterID" type="s:string" />
+    <wsdl:part name="browser_name" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+    <wsdl:part name="last_visit_time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Addbrowser_historyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="convertImageHttpPostIn">
+    <wsdl:part name="user_masterID" type="s:string" />
+    <wsdl:part name="imgtext" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="convertImageHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="processSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getActiveCount">
+      <wsdl:input message="tns:getActiveCountSoapIn" />
+      <wsdl:output message="tns:getActiveCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Addprocess_master">
+      <wsdl:input message="tns:Addprocess_masterSoapIn" />
+      <wsdl:output message="tns:Addprocess_masterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Addbrowser_history">
+      <wsdl:input message="tns:Addbrowser_historySoapIn" />
+      <wsdl:output message="tns:Addbrowser_historySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="convertImage">
+      <wsdl:input message="tns:convertImageSoapIn" />
+      <wsdl:output message="tns:convertImageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="processHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getActiveCount">
+      <wsdl:input message="tns:getActiveCountHttpGetIn" />
+      <wsdl:output message="tns:getActiveCountHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Addprocess_master">
+      <wsdl:input message="tns:Addprocess_masterHttpGetIn" />
+      <wsdl:output message="tns:Addprocess_masterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Addbrowser_history">
+      <wsdl:input message="tns:Addbrowser_historyHttpGetIn" />
+      <wsdl:output message="tns:Addbrowser_historyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="convertImage">
+      <wsdl:input message="tns:convertImageHttpGetIn" />
+      <wsdl:output message="tns:convertImageHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="processHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getActiveCount">
+      <wsdl:input message="tns:getActiveCountHttpPostIn" />
+      <wsdl:output message="tns:getActiveCountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Addprocess_master">
+      <wsdl:input message="tns:Addprocess_masterHttpPostIn" />
+      <wsdl:output message="tns:Addprocess_masterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Addbrowser_history">
+      <wsdl:input message="tns:Addbrowser_historyHttpPostIn" />
+      <wsdl:output message="tns:Addbrowser_historyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="convertImage">
+      <wsdl:input message="tns:convertImageHttpPostIn" />
+      <wsdl:output message="tns:convertImageHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="processSoap" type="tns:processSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActiveCount">
+      <soap:operation soapAction="http://tempuri.org/getActiveCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addprocess_master">
+      <soap:operation soapAction="http://tempuri.org/Addprocess_master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addbrowser_history">
+      <soap:operation soapAction="http://tempuri.org/Addbrowser_history" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertImage">
+      <soap:operation soapAction="http://tempuri.org/convertImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="processSoap12" type="tns:processSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActiveCount">
+      <soap12:operation soapAction="http://tempuri.org/getActiveCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addprocess_master">
+      <soap12:operation soapAction="http://tempuri.org/Addprocess_master" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addbrowser_history">
+      <soap12:operation soapAction="http://tempuri.org/Addbrowser_history" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertImage">
+      <soap12:operation soapAction="http://tempuri.org/convertImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="processHttpGet" type="tns:processHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActiveCount">
+      <http:operation location="/getActiveCount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addprocess_master">
+      <http:operation location="/Addprocess_master" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addbrowser_history">
+      <http:operation location="/Addbrowser_history" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertImage">
+      <http:operation location="/convertImage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="processHttpPost" type="tns:processHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActiveCount">
+      <http:operation location="/getActiveCount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addprocess_master">
+      <http:operation location="/Addprocess_master" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addbrowser_history">
+      <http:operation location="/Addbrowser_history" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertImage">
+      <http:operation location="/convertImage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="process">
+    <wsdl:port name="processSoap" binding="tns:processSoap">
+      <soap:address location="http://ec2-13-53-167-182.eu-north-1.compute.amazonaws.com/service/process.asmx" />
+    </wsdl:port>
+    <wsdl:port name="processSoap12" binding="tns:processSoap12">
+      <soap12:address location="http://ec2-13-53-167-182.eu-north-1.compute.amazonaws.com/service/process.asmx" />
+    </wsdl:port>
+    <wsdl:port name="processHttpGet" binding="tns:processHttpGet">
+      <http:address location="http://ec2-13-53-167-182.eu-north-1.compute.amazonaws.com/service/process.asmx" />
+    </wsdl:port>
+    <wsdl:port name="processHttpPost" binding="tns:processHttpPost">
+      <http:address location="http://ec2-13-53-167-182.eu-north-1.compute.amazonaws.com/service/process.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
